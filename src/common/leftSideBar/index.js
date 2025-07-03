@@ -67,9 +67,9 @@ class LeftSideBar extends Component {
                                 <Link  to="/notes">
                                     <NavItem><span className="iconfont">&#xe616;</span>闲言碎语</NavItem>
                                 </Link>
-                                <Link  to="/girl">
+                                {/* <Link  to="/girl">
                                     <NavItem><span className="iconfont">&#xe77a;</span>我的小孩</NavItem>
-                                </Link>
+                                </Link> */}
                                 <Link  to="/about">
                                     <NavItem><span className="iconfont">&#xe655;</span>关于柏成</NavItem>
                                 </Link>
@@ -117,9 +117,9 @@ class LeftSideBar extends Component {
                                 <Link  to="/notes">
                                     <NavItem><span className="iconfont">&#xe616;</span>闲言碎语</NavItem>
                                 </Link>
-                                <Link  to="/girl">
+                                {/* <Link  to="/girl">
                                     <NavItem><span className="iconfont">&#xe77a;</span>我的小孩</NavItem>
-                                </Link>
+                                </Link> */}
                                 <Link  to="/about">
                                     <NavItem><span className="iconfont">&#xe655;</span>关于柏成</NavItem>
                                 </Link>

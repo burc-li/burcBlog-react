@@ -33,7 +33,7 @@ class App extends Component{
           <Route path='/articleLine' exact component={ArticleLine}></Route>
           <Route path='/code' exact component={Code}></Route>
           <Route path='/notes' exact component={Code}></Route>
-          <Route path='/girl' exact component={Girl}></Route>
+          {/* <Route path='/girl' exact component={Girl}></Route> */}
           <Route path='/about' exact component={About}></Route>
           <Route path='/detail/:id' exact component={Detail}></Route>
           <Route path='/deta/:id' exact component={Detail}></Route>

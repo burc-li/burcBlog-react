@@ -32,7 +32,7 @@ class Content extends Component{
                     <Divider className="divider"></Divider>
                     <p className="tag">人间不正经生活手册</p>
                     <ImformationBox>
-                        <ImformationItem className="left">姓名<span>李百成</span></ImformationItem>
+                        <ImformationItem className="left">姓名<span>柏成</span></ImformationItem>
                         <ImformationItem className="right">学校<span>青岛理工大学</span></ImformationItem>
                         <ImformationItem className="left">性别<span>男</span></ImformationItem>
                         <ImformationItem className="right">学院<span>信控学院</span></ImformationItem>
@@ -87,7 +87,7 @@ class Content extends Component{
                     <p className="title">柏成の个人资料</p>
                     <Divider className="divider"></Divider>
                     <ImformationBox>
-                        <ImformationItem className="phone">姓名<span>李百成</span></ImformationItem>
+                        <ImformationItem className="phone">姓名<span>柏成</span></ImformationItem>
                         <ImformationItem className="phone">学校<span>青岛理工大学</span></ImformationItem>
                         <ImformationItem className="phone">性别<span>男</span></ImformationItem>
                         <ImformationItem className="phone">学院<span>信控学院</span></ImformationItem>

@@ -8,7 +8,10 @@ export const ContentWrapper = styled.div`
         padding:0 15px;
     }
     .divider{
-        background:#fff;  
+        background:#fff;
+        .ant-divider-inner-text{
+          color: #De5e60;
+        }
     }
     .divider::before,.divider::after{
         border-top: 1px solid #fff !important;
@@ -16,8 +19,8 @@ export const ContentWrapper = styled.div`
     h6{
         text-indent:0em;
         font-size:14px;
-        color:rgba(0,0,0,0.75);
-        font-weight: 500;
+        color:#58666E;
+        font-weight: bold;
         margin-top:1.2em;
         margin-bottom:0.5em;
     }

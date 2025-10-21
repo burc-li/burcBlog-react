@@ -67,7 +67,7 @@ class RightSideBar extends Component{
                         </LinkBox>
                     </RightSideBarWrapper>
                     {/* <BackTop onClick = {this.props.handeleBackTop}></BackTop> */}
-                    {this.props.scrollShow?<BackTop onClick = {()=>{this.props.handeleBackTop(this.rightSideBarWrapper)}}></BackTop>:""}
+                    {/* {this.props.scrollShow?<BackTop onClick = {()=>{this.props.handeleBackTop(this.rightSideBarWrapper)}}></BackTop>:""} */}
                 </MediaQuery>
             </Fragment>
         );

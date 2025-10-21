@@ -1,5 +1,7 @@
 import React,{ Component,Fragment } from 'react';
 import AvatarImg from '../../../../statics/headicon.jpg';
+import DiagramXImg from '../../../../statics/DiagramX.jpg';
+import BlogImg from '../../../../statics/blog.jpg';
 import { Avatar,AvatarItem,ContentWrapper } from './style';
 import { Divider } from 'antd';
 import MediaQuery from 'react-responsive';
@@ -14,47 +16,79 @@ class Content extends Component{
                     <Avatar>
                         <img src={AvatarImg} alt="头像"></img>
                         <AvatarItem className="burc">这里是柏成BurC的官方博客</AvatarItem>
-                        <AvatarItem>祝君食用快乐ヾ(◍°∇°◍)ﾉﾞ ~</AvatarItem>
+                        <AvatarItem>6年+经验 | 前端开发工程师</AvatarItem>
                     </Avatar>
-                    {/* <Divider className="divider"/>  */}
-                    <Divider className="divider" orientation="left">校园经历</Divider>
-                        <h6>1. 2016年9月考入青岛理工大学软件工程专业</h6>
-                        <h6>2. 大一上学期</h6>
-                            <p> 处于迷茫期，未确定自己发展方向，一直在校办勤工俭学</p>
-                        <h6>3. 大一下学期</h6>
-                            <p>成为公司“青岛海智信信息科技有限公司”负责人，担当企业法人</p>
-                            <p>创建“海智信团队”，获批入驻“青岛理工大学创业孵化基地A306室”</p>
-                        <h6>4. 大二上学期</h6>
-                            <p>获国家励志奖学金（5000元）</p>
-                        <h6>5. 大二下学期</h6>
-                            <p>使用jQuery/Bootstrap/PHP搭建个人博客</p>
-                        <h6>6. 大三上学期</h6>
-                            <p>国家级大学生创新创业训练计划项目圆满结题，项目编号：201710429380，证书编号：20170939</p>
-                            <p>获创新创业经费（10000元）</p>
-                            <p>获第十六届山东省大学生软件设计大赛二等奖</p>
-                        <h6>7. 大三下学期</h6>
-                            <p>获第十届“蓝桥杯”山东赛区C/C++程序设计大学B组三等奖</p>
-                            <p>获第十六届“挑战杯”.鲁南制药山东省大学生课外学术科技作品竞赛优秀作品二等奖</p>
-                            <p>使用React/Node搭建个人博客，废弃原有博客，本博客已上传GitHub，具体请参考<a target="_blank" href='https://github.com/BurCha/blog'>项目地址</a></p>
-
-                        <Divider className="divider" orientation="left">技术剖析</Divider>
-                        <h6><i className="iconfont">&#xe646;</i>信控学院-软件专业，在王老师指导下，自2017年9月开始独立自学Web开发技术。</h6>
-                        <h6><i className="iconfont">&#xe646;</i>HTML+CSS+JavaScript</h6>
-                            <p> 能够熟练完成各种静态页面的编写，可独立进行各类页面的布局，可使用原生HTML+CSS实现响应式，同时兼容电脑与手机访问</p>
-                            <p> 能够熟练开发各种交互功能，可解决大部分浏览器兼容问题，喜欢写原生JS代码，比如使用原生JS封装了Ajax方法 </p>
-                            <p> 《JavaScript高级程序设计》红宝书前七章看过两遍，掌握ES6常用语法及高级特性</p>
-                        <h6><i className="iconfont">&#xe646;</i> Bootstarp+jQuery</h6>
-                            <p> 熟练使用Bootstrap框架、字体图标等常用前端技术，根据官方代码整理了自己的Bootstrap组件库</p>
-                            <p> 熟练使用jQuery框架，整理了jQuery核心笔记一万余字</p>
-                        <h6><i className="iconfont">&#xe646;</i> PHP</h6>
-                            <p> 曾独立完成园丁小助手、个人博客项目的后台PHP开发</p>
-                            <p> 熟悉Apache、MySQL</p>
-                        <h6><i className="iconfont">&#xe646;</i> Canvas</h6>
-                            <p> 曾使用原生JS加Canvas写出了九宫格手势密码、涂鸦面板等功能，同时兼容电脑与手机</p>
-                        <h6><i className="iconfont">&#xe646;</i> React+Node</h6>
-                            <p> 掌握前端MVVM框架--React，熟悉jsx语法、组件、Props & State核心特性，了解Diff算法、生命周期函数等</p>
-                            <p> 该博客系统即采用React+Node独立完成</p>
-                            <p> 熟悉使用Nodejs+MySQL进行简单的后台搭建，完成后台需要的基本功能，对云服务器的构建有一定了解 </p>
+                    
+                    <Divider className="divider" orientation="left">个人简介</Divider>
+                    <p>6 年前端开发经验，主导企业架构平台、物联网系统、作图引擎等复杂系统从 0 到 1 落地，具备大型项目交付与系统架构能力
+热衷技术分享，掘金年度人气作者 TOP 50，持续输出 Vue 源码、Qiankun 微前端架构与工程化等系列博文，累计阅读量超
+10W+</p>
+                    
+                    <h6>代表作品：</h6>
+                    <p>1. <a target="_blank" rel="noopener noreferrer" href="http://burc.top/diagramX">DiagramX | 在线作图平台</a></p>
+                    <p>独立开发，基于Vue3+GoJS构建的Web端作图平台，专业强大！</p>
+                    <p>2. <a target="_blank" rel="noopener noreferrer" href="http://burc.top">个人博客系统</a></p>
+                    <p>大学期间独立开发，React+Express前后端分离架构，使用Docker Compose实现前后端一键部署，部署效率提升70%。</p>
+                    
+                    <Divider className="divider" orientation="left">工作经历</Divider>
+                    <h6><i className="iconfont">&#xe646;</i>北京优诺科技股份有限公司  (2021.09 - 至今)</h6>
+                    <p>• 负责企业架构管理平台(QuickEA)端到端开发，涵盖协同作图、可视化编辑器、元模型建模器等核心模块</p>
+                    <p>• 深度定制GoJS作图引擎，实现UML/BPMN/ArchiMate图形化建模能力，GoJS画布内智能作图、Mention系统(@mention)、交互式Tree Viewer组件、D3力导向图可视化模块</p>
+                    <p>• 主导前端架构升级，完成webpack4→webpack5升级；构建速度提升60%；基于pnpm + monorepo构建微前端(Qiankun)方案，支持模块联邦，减少重复依赖80%</p>
+                    
+                    <h6><i className="iconfont">&#xe646;</i>山东有人物联网股份有限公司  (2020.04 - 2021.09)</h6>
+                    <p>• 负责物联网云平台PC端和小程序开发，推进项目流程标准化</p>
+                    <p>• 主导构建ESlint + Prettier + Husky等开发规范体系，代码审查时间减少30%</p>
+                    <p>• 主导生物安全系统可视化大屏设计，支持ECharts地图三级钻取、实时数据监控等功能</p>
+                    
+                    <h6><i className="iconfont">&#xe646;</i>北京知道创宇信息技术股份有限公司  (2019.09 - 2019.12)</h6>
+                    <p>• 参与慧眼UI2.0重构，使用React + AntD + ECharts重构页面，完成中国电信研究院数据可视化展示</p>
+                    
+                    <Divider className="divider" orientation="left">项目经历</Divider>
+                    <h6><i className="iconfont">&#xe646;</i>QuickEA企业架构管理平台</h6>
+                    <p>• <strong style={{ color: '#58666E' }}>角色</strong>: 负责平台及作图工具全周期开发维护</p>
+                    <p>• <strong style={{ color: '#58666E' }}>简介</strong>: 该系统为企业架构管理平台。企业数字化转型核心工具，基于元模型实现数图联动，形成可传承架构资产</p>
+                    <p>• <strong style={{ color: '#58666E' }}>成果</strong>: 获得 Open Group 亚太区年度大奖，成功落地于招商银行、国投证券、一汽大众、春秋航空等20+行业头部客户</p>
+                    <p>• <strong style={{ color: '#58666E' }}>技术</strong>:</p>
+                    <p>  - 深度定制 GoJS 作图引擎，支持 UML/BPMN/ArchiMate/组态图等多类型模型在线建模与协同编辑</p>
+                    <p>  - 实现 GoJS 画布内智能成图、Mention 系统(@提及)、可交互的Tree Viewer 组件以及D3力导向图可视化模块等</p>
+                    <p>  - 完成 Webpack4 → Webpack5 升级，搭建基于pnpm + monorepo 的微前端架构(Qiankun + 模块联邦)</p>
+                    
+                    <h6><i className="iconfont">&#xe646;</i>生物安全管控系统</h6>
+                    <p>• <strong style={{ color: '#58666E' }}>简介</strong>: 该系统为温氏食品集团股份有限公司的管控系统，基于物联网云平台二开，实现工业设备数据实时采集与洗消流程全周期监控，构建病毒阻隔智能防控体系。</p>
+                    <p>• <strong style={{ color: '#58666E' }}>技术</strong>:</p>
+                    <p>  - 采用 Vue 全家桶+ ECharts 开发数据可视化大屏，实现地图三级下钻(省-市县)数据展示。开源解决方案: <a target="_blank" rel="noopener noreferrer" href="https://github.com/burc-li/vue-map-drilling">https://github.com/burc-li/vue-map-drilling</a></p>
+                    <p>  - 完成 Webpack V4 性能优化，开发环境打包速度提升35%，并沉淀为Vue 工程模板: <a target="_blank" rel="noopener noreferrer" href="https://github.com/burc-li/webpack-vue">https://github.com/burc-li/webpack-vue</a></p>
+                    
+                    <h6><i className="iconfont">&#xe646;</i>物联网云平台</h6>
+                    <p>• <strong style={{ color: '#58666E' }}>简介</strong>: 面向工业设备的数据采集与管理系统，基于MQTT 实现主题发布与订阅，支持终端设备数据采集、报警推送等功能，帮助企业快速搭建低成本、高效率的物联网平台</p>
+                    <p>• <strong style={{ color: '#58666E' }}>技术</strong>:</p>
+                    <p>  - 实现基于Vue 的角色权限控制模型，动态生成路由表与权限菜单，提高系统菜单扩展性</p>
+                    <p>  - 优化小程序中 ECharts 的万级数据渲染卡顿现象，页面加载时间缩短 90%</p>
+                    
+                    <h6><i className="iconfont">&#xe646;</i>大学生扫码签到</h6>
+                    <p>• <strong style={{ color: '#58666E' }}>角色</strong>: 项目负责人</p>
+                    <p>• <strong style={{ color: '#58666E' }}>简介</strong>: 一款基于手机扫码+地理定位的在线签到系统，通过扫码获取学生身份与地理位置，集成百度地图API 实现定位数据可视化打点，实现课堂防代签与自动签到管理</p>
+                    <p>• <strong style={{ color: '#58666E' }}>成果</strong>: 获国家级大学生创新创业训练计划结题证书、挑战杯二等奖、山东省大学生软件设计大赛二等奖，在信控学院试点，考勤效率提升 80%</p>
+                    <p>• <strong style={{ color: '#58666E' }}>技术</strong>: 前端用React，后端用PHP，集成百度地图API 实现定位与可视化</p>
+                    
+                    <Divider className="divider" orientation="left">专业技能</Divider>
+                    <p style={{ textIndent: 0 }}><i className="iconfont">&#xe646;</i><strong style={{ color: '#58666E' }}>核心技能</strong>：精通HTML/CSS/JavaScript(ES6+)，熟练Vue生态(阅读并输出了部分源码笔记)，React框架</p>
+                    <p style={{ textIndent: 0 }}><i className="iconfont">&#xe646;</i><strong style={{ color: '#58666E' }}>可视化开发</strong>：熟练使用GoJS，有复杂图形编辑器和业务图表系统开发经验</p>
+                    <p style={{ textIndent: 0 }}><i className="iconfont">&#xe646;</i><strong style={{ color: '#58666E' }}>工程化能力</strong>：掌握Webpack构建体系和性能优化，熟悉微前端架构(Qiankun)、Monorepo项目架构、模块联邦拆分</p>
+                    <p style={{ textIndent: 0 }}><i className="iconfont">&#xe646;</i><strong style={{ color: '#58666E' }}>全栈基础</strong>：熟悉Node.js + MySQL进行简单后端开发，有Docker容器部署和Nginx反向代理经验</p>
+                    
+                    <Divider className="divider" orientation="left">作品集</Divider>
+                    <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', marginBottom: '20px' }}>
+                        <div style={{ textAlign: 'center' }}>
+                            <img src={DiagramXImg} alt="DigramX QR码" style={{ width: '100px', height: '100px', margin: '0 auto 10px', display: 'block' }} />
+                            <p style={{ margin: 0, fontSize: '14px' }}>DigramX (仅支持PC端)</p>
+                        </div>
+                        <div style={{ textAlign: 'center' }}>
+                            <img src={BlogImg} alt="个人博客 QR码" style={{ width: '100px', height: '100px', margin: '0 auto 10px', display: 'block' }} />
+                            <p style={{ margin: 0, fontSize: '14px' }}>个人博客 (PC端/移动端)</p>
+                        </div>
+                    </div>
                 </ContentWrapper>
             </MediaQuery>
             {/* 手机  <=767px */}
@@ -63,47 +97,67 @@ class Content extends Component{
                     <Avatar>
                         <img src={AvatarImg} alt="头像"></img>
                         <AvatarItem className="burc">这里是柏成BurC的官方博客</AvatarItem>
-                        <AvatarItem>祝君食用快乐ヾ(◍°∇°◍)ﾉﾞ ~</AvatarItem>
+                        <AvatarItem>6年前端开发工程师 | 专注企业级应用开发</AvatarItem>
                     </Avatar>
-                    {/* <Divider className="divider"/>  */}
-                    <Divider className="divider" orientation="left">校园经历</Divider>
-                        <h6>1. 2016年9月考入青岛理工大学软件工程专业</h6>
-                        <h6>2. 大一上学期</h6>
-                            <p> 处于迷茫期，未确定自己发展方向，一直在校办勤工俭学</p>
-                        <h6>3. 大一下学期</h6>
-                            <p>成为公司“青岛海智信信息科技有限公司”负责人，担当企业法人</p>
-                            <p>创建“海智信团队”，获批入驻“青岛理工大学创业孵化基地A306室”</p>
-                        <h6>4. 大二上学期</h6>
-                            <p>获国家励志奖学金（5000元）</p>
-                        <h6>5. 大二下学期</h6>
-                            <p>使用jQuery/Bootstrap/PHP搭建个人博客</p>
-                        <h6>6. 大三上学期</h6>
-                            <p>国家级大学生创新创业训练计划项目圆满结题，项目编号：201710429380，证书编号：20170939</p>
-                            <p>获创新创业经费（10000元）</p>
-                            <p>获第十六届山东省大学生软件设计大赛二等奖</p>
-                        <h6>7. 大三下学期</h6>
-                            <p>获第十届“蓝桥杯”山东赛区C/C++程序设计大学B组三等奖</p>
-                            <p>获第十六届“挑战杯”.鲁南制药山东省大学生课外学术科技作品竞赛优秀作品二等奖</p>
-                            <p>使用React/Node搭建个人博客，废弃原有博客，本博客已上传GitHub，具体请参考<a target="_blank" href='https://github.com/BurCha/blog'>项目地址</a></p>
-
-                        <Divider className="divider" orientation="left">技术剖析</Divider>
-                        <h6><i className="iconfont">&#xe646;</i>信控学院-软件专业，在王老师指导下，自2017年9月开始独立自学Web开发技术。</h6>
-                        <h6><i className="iconfont">&#xe646;</i>HTML+CSS+JavaScript</h6>
-                            <p> 能够熟练完成各种静态页面的编写，可独立进行各类页面的布局，可使用原生HTML+CSS实现响应式，同时兼容电脑与手机访问</p>
-                            <p> 能够熟练开发各种交互功能，可解决大部分浏览器兼容问题，喜欢写原生JS代码，比如使用原生JS封装了Ajax方法 </p>
-                            <p> 《JavaScript高级程序设计》红宝书前七章看过两遍，掌握ES6常用语法及高级特性</p>
-                        <h6><i className="iconfont">&#xe646;</i> Bootstarp+jQuery</h6>
-                            <p> 熟练使用Bootstrap框架、字体图标等常用前端技术，根据官方代码整理了自己的Bootstrap组件库</p>
-                            <p> 熟练使用jQuery框架，整理了jQuery核心笔记一万余字</p>
-                        <h6><i className="iconfont">&#xe646;</i> PHP</h6>
-                            <p> 曾独立完成园丁小助手、个人博客项目的后台PHP开发</p>
-                            <p> 熟悉Apache、MySQL</p>
-                        <h6><i className="iconfont">&#xe646;</i> Canvas</h6>
-                            <p> 曾使用原生JS加Canvas写出了九宫格手势密码、涂鸦面板等功能，同时兼容电脑与手机</p>
-                        <h6><i className="iconfont">&#xe646;</i> React+Node</h6>
-                            <p> 掌握前端MVVM框架--React，熟悉jsx语法、组件、Props & State核心特性，了解Diff算法、生命周期函数等</p>
-                            <p> 该博客系统即采用React+Node独立完成</p>
-                            <p> 熟悉使用Nodejs+MySQL进行简单的后台搭建，完成后台需要的基本功能，对云服务器的构建有一定了解 </p>
+                    
+                    <Divider className="divider" orientation="left">个人简介</Divider>
+                    <p>6 年前端开发经验，主导企业架构平台、物联网系统、作图引擎等复杂系统从 0 到 1 落地，具备大型项目交付与系统架构能力
+热衷技术分享，掘金年度人气作者 TOP 50，持续输出 Vue 源码、Qiankun 微前端架构与工程化等系列博文，累计阅读量超
+10W+</p>
+                    
+<h6>代表作品：</h6>
+                    <p>1. <a target="_blank" rel="noopener noreferrer" href="http://burc.top/diagramX">DiagramX | 在线作图平台</a></p>
+                    <p>独立开发，基于Vue3+GoJS构建的Web端作图平台，专业强大！</p>
+                    <p>2. <a target="_blank" rel="noopener noreferrer" href="http://burc.top">个人博客系统</a></p>
+                    <p>大学期间独立开发，React+Express前后端分离架构，使用Docker Compose实现前后端一键部署，部署效率提升70%。</p>
+                    
+                    <Divider className="divider" orientation="left">工作经历</Divider>
+                    <h6><i className="iconfont">&#xe646;</i>北京优诺科技股份有限公司  (2021.09 - 至今)</h6>
+                    <p>• 负责企业架构管理平台(QuickEA)端到端开发，涵盖协同作图、可视化编辑器、元模型建模器等核心模块</p>
+                    <p>• 深度定制GoJS作图引擎，实现UML/BPMN/ArchiMate图形化建模能力，GoJS画布内智能作图、Mention系统(@mention)、交互式Tree Viewer组件、D3力导向图可视化模块</p>
+                    <p>• 主导前端架构升级，完成webpack4→webpack5升级；构建速度提升60%；基于pnpm + monorepo构建微前端(Qiankun)方案，支持模块联邦，减少重复依赖80%</p>
+                    
+                    <h6><i className="iconfont">&#xe646;</i>山东有人物联网股份有限公司  (2020.04 - 2021.09)</h6>
+                    <p>• 负责物联网云平台PC端和小程序开发，推进项目流程标准化</p>
+                    <p>• 主导构建ESlint + Prettier + Husky等开发规范体系，代码审查时间减少30%</p>
+                    <p>• 主导生物安全系统可视化大屏设计，支持ECharts地图三级钻取、实时数据监控等功能</p>
+                    
+                    <h6><i className="iconfont">&#xe646;</i>北京知道创宇信息技术股份有限公司  (2019.09 - 2019.12)</h6>
+                    <p>• 参与慧眼UI2.0重构，使用React + AntD + ECharts重构页面，完成中国电信研究院数据可视化展示</p>
+                    
+                    <Divider className="divider" orientation="left">项目经历</Divider>
+                    <h6><i className="iconfont">&#xe646;</i>QuickEA企业架构管理平台</h6>
+                    <p>• <strong style={{ color: '#58666E' }}>角色</strong>: 负责平台及作图工具全周期开发维护</p>
+                    <p>• <strong style={{ color: '#58666E' }}>简介</strong>: 该系统为企业架构管理平台。企业数字化转型核心工具，基于元模型实现数图联动，形成可传承架构资产</p>
+                    <p>• <strong style={{ color: '#58666E' }}>成果</strong>: 获得 Open Group 亚太区年度大奖，成功落地于招商银行、国投证券、一汽大众、春秋航空等20+行业头部客户</p>
+                    <p>• <strong style={{ color: '#58666E' }}>技术</strong>:</p>
+                    <p>  - 深度定制 GoJS 作图引擎，支持 UML/BPMN/ArchiMate/组态图等多类型模型在线建模与协同编辑</p>
+                    <p>  - 实现 GoJS 画布内智能成图、Mention 系统(@提及)、可交互的Tree Viewer 组件以及D3力导向图可视化模块等</p>
+                    <p>  - 完成 Webpack4 → Webpack5 升级，搭建基于pnpm + monorepo 的微前端架构(Qiankun + 模块联邦)</p>
+                    
+                    <h6><i className="iconfont">&#xe646;</i>生物安全管控系统</h6>
+                    <p>• <strong style={{ color: '#58666E' }}>简介</strong>: 该系统为温氏食品集团股份有限公司的管控系统，基于物联网云平台二开，实现工业设备数据实时采集与洗消流程全周期监控，构建病毒阻隔智能防控体系。</p>
+                    <p>• <strong style={{ color: '#58666E' }}>技术</strong>:</p>
+                    <p>  - 采用 Vue 全家桶+ ECharts 开发数据可视化大屏，实现地图三级下钻(省-市县)数据展示。开源解决方案: <a target="_blank" rel="noopener noreferrer" href="https://github.com/burc-li/vue-map-drilling">https://github.com/burc-li/vue-map-drilling</a></p>
+                    <p>  - 完成 Webpack V4 性能优化，开发环境打包速度提升35%，并沉淀为Vue 工程模板: <a target="_blank" rel="noopener noreferrer" href="https://github.com/burc-li/webpack-vue">https://github.com/burc-li/webpack-vue</a></p>
+                    
+                    <h6><i className="iconfont">&#xe646;</i>物联网云平台</h6>
+                    <p>• <strong style={{ color: '#58666E' }}>简介</strong>: 面向工业设备的数据采集与管理系统，基于MQTT 实现主题发布与订阅，支持终端设备数据采集、报警推送等功能，帮助企业快速搭建低成本、高效率的物联网平台</p>
+                    <p>• <strong style={{ color: '#58666E' }}>技术</strong>:</p>
+                    <p>  - 实现基于Vue 的角色权限控制模型，动态生成路由表与权限菜单，提高系统菜单扩展性</p>
+                    <p>  - 优化小程序中 ECharts 的万级数据渲染卡顿现象，页面加载时间缩短 90%</p>
+                    
+                    <h6><i className="iconfont">&#xe646;</i>大学生扫码签到</h6>
+                    <p>• <strong style={{ color: '#58666E' }}>角色</strong>: 项目负责人</p>
+                    <p>• <strong style={{ color: '#58666E' }}>简介</strong>: 一款基于手机扫码+地理定位的在线签到系统，通过扫码获取学生身份与地理位置，集成百度地图API 实现定位数据可视化打点，实现课堂防代签与自动签到管理</p>
+                    <p>• <strong style={{ color: '#58666E' }}>成果</strong>: 获国家级大学生创新创业训练计划结题证书、挑战杯二等奖、山东省大学生软件设计大赛二等奖，在信控学院试点，考勤效率提升 80%</p>
+                    <p>• <strong style={{ color: '#58666E' }}>技术</strong>: 前端用React，后端用PHP，集成百度地图API 实现定位与可视化</p>
+                    
+                    <Divider className="divider" orientation="left">专业技能</Divider>
+                    <p style={{ textIndent: 0 }}><i className="iconfont">&#xe646;</i><strong style={{ color: '#58666E' }}>核心技能</strong>：精通HTML/CSS/JavaScript(ES6+)，熟练Vue生态(阅读并输出了部分源码笔记)，React框架</p>
+                    <p style={{ textIndent: 0 }}><i className="iconfont">&#xe646;</i><strong style={{ color: '#58666E' }}>可视化开发</strong>：熟练使用GoJS，有复杂图形编辑器和业务图表系统开发经验</p>
+                    <p style={{ textIndent: 0 }}><i className="iconfont">&#xe646;</i><strong style={{ color: '#58666E' }}>工程化能力</strong>：掌握Webpack构建体系和性能优化，熟悉微前端架构(Qiankun)、Monorepo项目架构、模块联邦拆分</p>
+                    <p style={{ textIndent: 0 }}><i className="iconfont">&#xe646;</i><strong style={{ color: '#58666E' }}>全栈基础</strong>：熟悉Node.js + MySQL进行简单后端开发，有Docker容器部署和Nginx反向代理经验</p>
                 </ContentWrapper>
             </MediaQuery>
             </Fragment>

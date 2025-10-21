@@ -8,7 +8,6 @@ export const ContentWrapper = styled.div`
         padding:0 15px;
     }
     .divider{
-        background:#fff;
         .ant-divider-inner-text{
           color: #De5e60;
         }

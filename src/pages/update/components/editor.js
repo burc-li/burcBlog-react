@@ -8,8 +8,27 @@ import * as actionCreators from '../store/actionCreators';
 import { getDetailAction } from '../../detail/store/actionCreators';
 import E from "wangeditor";
 import { Divider } from 'antd';
+import hljs from "highlight.js";
+import 'highlight.js/styles/atom-one-dark.css'; 
 
-class Editor extends PureComponent{
+class Editor extends PureComponent{ 
+    // 格式化内容
+    formatContent(html) {
+      return html.replace(/<br\s*\/?>/g, '\n')
+      .replace(/<code(?!.*class=)/g, '<code class="language-js"')
+  }
+    // 高亮代码
+    highlightCode = () => {
+        if (!this.articleRef) return;
+        const blocks = this.articleRef.querySelectorAll('pre code');
+        blocks.forEach((block) => {
+            hljs.highlightElement(block);
+        });
+    };
+
+    componentDidUpdate() {
+        this.highlightCode();
+    }
     render(){
         const { title,author,label,option,abstract,content,updateState,titleChange,abstractChange, authorChange,labelChange,selectChange,updateBlog } = this.props;
         return(
@@ -33,7 +52,7 @@ class Editor extends PureComponent{
                 <ArticalTitle>
                     <p>{title}</p>
                 </ArticalTitle>
-                <ArticalInfo  dangerouslySetInnerHTML={{__html: content}}>
+                <ArticalInfo ref={(el) => (this.articleRef = el)}  dangerouslySetInnerHTML={{ __html: this.formatContent(content) }}>
                 </ArticalInfo>
              </ArticalBox>
             </EditorBox>
@@ -43,9 +62,10 @@ class Editor extends PureComponent{
             </Fragment>
         )
     }
-
+    
      //在组件被挂载到页面之后，自动执行
      componentDidMount(){
+        this.highlightCode();
         const elem = this.refs.editorElem; //获取editorElem盒子
         const editor = new E(elem);  //new 一个 editorElem富文本
         // 自定义菜单配置

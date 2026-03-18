@@ -3,9 +3,33 @@ import { connect } from "react-redux";
 import { ArticalBox,ArticalTitle,ArticalInfo,ArticalFooter } from "./style";
 import { SkeletonBox } from '../../code/components/style';
 import { Skeleton } from 'antd';
+import hljs from "highlight.js";
+import 'highlight.js/styles/atom-one-dark.css'; 
 
 
 class ArticleDetail extends PureComponent{
+    // 格式化内容
+    formatContent(html) {
+        return html.replace(/<br\s*\/?>/g, '\n')
+        .replace(/<code(?!.*class=)/g, '<code class="language-js"')
+    }
+    // 高亮代码
+    highlightCode = () => {
+        if (!this.articleRef) return;
+        const blocks = this.articleRef.querySelectorAll('pre code');
+        blocks.forEach((block) => {
+            hljs.highlightElement(block);
+        });
+    };
+
+    componentDidUpdate() {
+        this.highlightCode();
+    }
+
+    componentDidMount() {
+        this.highlightCode();
+    }
+
     render(){
         const { title,content, createdate} = this.props;
         return(
@@ -16,7 +40,7 @@ class ArticleDetail extends PureComponent{
                     <ArticalTitle>
                         <p>{title}</p>
                     </ArticalTitle>
-                    <ArticalInfo dangerouslySetInnerHTML={{__html: content}}>
+                    <ArticalInfo ref={(el) => (this.articleRef = el)} dangerouslySetInnerHTML={{ __html: this.formatContent(content) }}>
                     </ArticalInfo>
                     <ArticalFooter>
                         <p>{createdate}</p>

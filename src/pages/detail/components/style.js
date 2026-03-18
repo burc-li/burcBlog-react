@@ -73,24 +73,51 @@ export const ArticalInfo = styled.div`
     h5, h6 { font-weight: bolder }
     /* table 样式 */
     table {
-        border-top: 1px solid #ccc;
-        border-left: 1px solid #ccc;
-        margin-bottom:12px;
+        width: 100%;
+        min-width: 100%;
+        table-layout: fixed;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin: 16px 0;
+        background: #ffffff;
+        border: 1px solid #e6eaf0;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+        display: table;
     }
     table tr{
         &:hover{
-            background:#F1F3F4;
+            background:#f7fafc;
         }
+    }
+    table tbody tr:nth-child(even){
+        background:#fbfcfe;
     }
     table td,
     table th {
-        border-bottom: 1px solid #ccc;
-        border-right: 1px solid #ccc;
-        padding: 3px 5px;
+        border-bottom: 1px solid #edf1f5;
+        border-right: 1px solid #edf1f5;
+        padding: 10px 12px;
+        font-size: 14px;
+        line-height: 1.6;
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: anywhere;
     }
     table th {
-        border-bottom: 2px solid #ccc;
+        background: #f4f7fb;
+        color: #334155;
+        font-weight: 600;
+        border-bottom: 1px solid #dfe6ee;
         text-align: center;
+    }
+    table th:last-child,
+    table td:last-child {
+        border-right: none;
+    }
+    table tr:last-child td {
+        border-bottom: none;
     }
 
     /* blockquote 样式 */
@@ -104,30 +131,94 @@ export const ArticalInfo = styled.div`
         background-color: #F1F3F4;
     }
 
-    /* code 样式 */
-    code {
-        display: inline-block;
-        *display: inline;
-        *zoom: 1;
-        border:1px solid rgba(0,0,0,0.1);
-        background-color: #F1F3F4;
-        border-radius: 3px;
-        padding: 5px 15px;
+    /* 行内代码 */
+    code:not(pre code) {
+        font-family: "Fira Code", "Consolas", "Monaco", monospace;
+        font-size: 0.9em;
+        color: #ff7ab8;
+        border: 1px solid #3d3d3d;
+        background-color: #1f1f1f;
+        border-radius: 5px;
+        padding: 2px 7px;
         margin: 0 3px;
-        overflow:auto;
-        line-height:1.6em;
     }
-    pre code {
-        font-size:14px;
+
+    /* 代码块 */
+    pre {
+        position: relative;
+        margin: 16px 0;
+        border: 1px solid #3a3a3c;
+        border-radius: 12px;
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.26);
+        background: #26292E;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    pre::before {
+        content: "";
         display: block;
-        margin-bottom:12px;
-        margin-left:2em;
-        margin-right:2em;
+        height: 28px;
+        background: linear-gradient(180deg, #30343b 0%, #292d34 100%);
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        border-bottom: 1px solid #3a4048;
     }
+    pre::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 12px;
+        width: 42px;
+        height: 10px;
+        border-radius: 10px;
+        background:
+            radial-gradient(circle at 5px 5px, #ff5f57 5px, transparent 6px),
+            radial-gradient(circle at 21px 5px, #febc2e 5px, transparent 6px),
+            radial-gradient(circle at 37px 5px, #28c840 5px, transparent 6px);
+    }
+
+    pre code {
+        display: block;
+        font-family: "Fira Code", "Consolas", "Monaco", monospace;
+        font-size: 13px;
+        line-height: 1.75;
+        padding: 14px 16px 16px;
+        white-space: pre-wrap;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        border: none;
+        border-radius: 0 0 12px 12px;
+        background: transparent;
+        color: #f5f5f7;
+    }
+
+    .hljs {
+        background: transparent !important;
+        color: #f5f5f7;
+        white-space: pre-wrap;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+    }
+    pre::-webkit-scrollbar {
+        height: 8px;
+    }
+    pre::-webkit-scrollbar-track {
+        background: #2b2b2d;
+        border-radius: 8px;
+    }
+    pre::-webkit-scrollbar-thumb {
+        background: #5a5a5f;
+        border-radius: 8px;
+    }
+    pre::-webkit-scrollbar-thumb:hover {
+        background: #727278;
+    }
+
+
 
     /* ul ol 样式 */
     ul, ol {
-        margin: 10px 0 10px 4em;
+        margin: 10px 0 10px 3.4em;
         line-height:1.8em;
     }
     ul{
@@ -136,15 +227,17 @@ export const ArticalInfo = styled.div`
 
     /* img 样式 */
     img{
-        box-shadow: 0px 0px 5px #404040;
-        border-radius:2px;
-        border:1px solid #CCC;
-        max-width: 93%!important;
-        height: 300px;
-        text-align: center;
+        box-shadow: 0 2px 8px rgba(15, 23, 42, 0.1);
+        border-radius:10px;
+        border:1px solid #e6eaf0;
+        max-width: 92%!important;
+        width: auto;
+        height: auto;
+        max-height: 560px;
+        object-fit: contain;
         margin: 0 auto;
-        margin-top:5px;
-        margin-bottom:0px;
+        margin-top:12px;
+        margin-bottom:8px;
         display: block;
     }
     `;

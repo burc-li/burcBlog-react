@@ -73,18 +73,19 @@ export const ArticalInfo = styled.div`
     h5, h6 { font-weight: bolder }
     /* table 样式 */
     table {
-        width: 100%;
-        min-width: 100%;
+        width: calc(100% - 4em);
+        min-width: calc(100% - 4em);
         table-layout: fixed;
         border-collapse: separate;
         border-spacing: 0;
-        margin: 16px 0;
+        margin: 16px 2em;
         background: #ffffff;
         border: 1px solid #e6eaf0;
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
         display: table;
+        box-sizing: border-box;
     }
     table tr{
         &:hover{
@@ -119,6 +120,13 @@ export const ArticalInfo = styled.div`
     table tr:last-child td {
         border-bottom: none;
     }
+    @media (max-width: 768px) {
+        table {
+            width: 100%;
+            min-width: 100%;
+            margin: 16px 0;
+        }
+    }
 
     /* blockquote 样式 */
     blockquote {
@@ -146,21 +154,21 @@ export const ArticalInfo = styled.div`
     /* 代码块 */
     pre {
         position: relative;
-        margin: 16px 0;
-        border: 1px solid #3a3a3c;
-        border-radius: 12px;
-        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.26);
-        background: #26292E;
-        overflow-x: auto;
-        overflow-y: hidden;
+        margin: 16px 2em;
+        border-radius:  6px;
+        // box-shadow: 0 3px 10px rgba(15, 23, 42, 0.12), 0 1px 2px rgba(15, 23, 42, 0.08);
+        box-shadow: 0 0 5px hsla(0,0%,43.1%,.35);
+        background: #F1F3F4;
+        overflow: hidden;
     }
     pre::before {
         content: "";
         display: block;
         height: 28px;
-        background: linear-gradient(180deg, #30343b 0%, #292d34 100%);
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
+        // background: linear-gradient(180deg, #30343b 0%, #292d34 100%);
+        background: #FFFFFF;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
         border-bottom: 1px solid #3a4048;
     }
     pre::after {
@@ -186,31 +194,33 @@ export const ArticalInfo = styled.div`
         white-space: pre-wrap;
         word-break: break-word;
         overflow-wrap: anywhere;
+        overflow-x: auto;
+        overflow-y: hidden;
         border: none;
-        border-radius: 0 0 12px 12px;
-        background: transparent;
+        border-radius: 0 0 6px 6px;
+        background: #26292E;
         color: #f5f5f7;
     }
 
     .hljs {
-        background: transparent !important;
+        background: #26292E !important;
         color: #f5f5f7;
         white-space: pre-wrap;
         word-break: break-word;
         overflow-wrap: anywhere;
     }
-    pre::-webkit-scrollbar {
+    pre code::-webkit-scrollbar {
         height: 8px;
     }
-    pre::-webkit-scrollbar-track {
+    pre code::-webkit-scrollbar-track {
         background: #2b2b2d;
         border-radius: 8px;
     }
-    pre::-webkit-scrollbar-thumb {
+    pre code::-webkit-scrollbar-thumb {
         background: #5a5a5f;
         border-radius: 8px;
     }
-    pre::-webkit-scrollbar-thumb:hover {
+    pre code::-webkit-scrollbar-thumb:hover {
         background: #727278;
     }
 

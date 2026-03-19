@@ -91,7 +91,7 @@ export const ArticalInfo = styled.div`
             background:#f7fafc;
         }
     }
-    table tbody tr:nth-child(even){
+    table tbody tr:nth-child(odd){
         background:#fbfcfe;
     }
     table td,

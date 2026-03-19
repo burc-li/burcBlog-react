@@ -73,7 +73,6 @@ export const ArticalInfo = styled.div`
     h5, h6 { font-weight: bolder }
     /* table 样式 */
     table {
-        width: calc(100% - 4em);
         min-width: calc(100% - 4em);
         table-layout: fixed;
         border-collapse: separate;

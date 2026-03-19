@@ -2,22 +2,44 @@ import styled from 'styled-components';
 
 export const PageWrapper = styled.div`
 &.container{
-    background:#FFFAF0;
+    background: #434343 url(/uchu01.bg.jpg) repeat scroll 0 0;
+    overflow: hidden;
+    isolation: isolate;
     position:absolute;
     bottom:0;
     left:0;
     right:0;
     top:0px;
 }
+
 .row{
     height:100%;
+    position: relative;
+    z-index: 1;
 }
 .col{
     position:relative;
     overflow-x: hidden;
     height:100%;
-    background: #F5F5F5;
-    box-shadow:0px 0px 30px 5px #26292E;
+    transform: translateY(-2px);
+    background: linear-gradient(180deg, #f9fafc 0%, #f3f5f8 100%);
+    box-shadow:
+        0 44px 84px rgba(15, 23, 42, 0.24),
+        0 18px 34px rgba(15, 23, 42, 0.16),
+        0 6px 14px rgba(15, 23, 42, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.68),
+        inset 0 -1px 0 rgba(15, 23, 42, 0.06);
+}
+@keyframes liquidFloat {
+    0% {
+        transform: translate3d(-2%, -1%, 0) scale(1);
+    }
+    50% {
+        transform: translate3d(2%, 1%, 0) scale(1.06);
+    }
+    100% {
+        transform: translate3d(0, -1%, 0) scale(1.02);
+    }
 }
 `;
 export const PageSlide = styled.div`

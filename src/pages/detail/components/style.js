@@ -120,10 +120,8 @@ export const ArticalInfo = styled.div`
     table tr:last-child td {
         border-bottom: none;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 991px) {
         table {
-            width: 100%;
-            min-width: 100%;
             margin: 16px 0;
         }
     }
@@ -160,6 +158,11 @@ export const ArticalInfo = styled.div`
         box-shadow: 0 0 5px hsla(0,0%,43.1%,.35);
         background: #F1F3F4;
         overflow: hidden;
+    }
+    @media (max-width: 991px) {
+        pre {
+            margin: 16px 0;
+        }
     }
     pre::before {
         content: "";

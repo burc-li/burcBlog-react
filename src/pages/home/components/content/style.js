@@ -37,7 +37,6 @@ export const Avatar = styled.div`
         height:250px;
         display:block;
         margin:0 auto;
-        border-radius:40% 40% 2% 40%;
     }
 `;
 export const AvatarItem = styled.p`

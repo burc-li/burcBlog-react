@@ -1,15 +1,15 @@
 import styled from 'styled-components';
+import BgImg from '../../statics/uchu01.bg.jpg';
 
 export const PageWrapper = styled.div`
-&.container{
-    background: #434343 url(/uchu01.bg.jpg) repeat scroll 0 0;
-    overflow: hidden;
-    isolation: isolate;
-    position:absolute;
-    bottom:0;
-    left:0;
-    right:0;
-    top:0px;
+&.container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  isolation: isolate;
+
+  /* 原背景保留 */
+  background: #434343 url(${BgImg}) repeat;
 }
 
 .row{

@@ -1,5 +1,5 @@
 import React,{ Component,Fragment } from 'react';
-import AvatarImg from '../../../../statics/headicon.jpg';
+import AvatarImg from '../../../../statics/diagramX.svg';
 import DiagramXImg from '../../../../statics/DiagramX.jpg';
 import BlogImg from '../../../../statics/blog.jpg';
 import { Avatar,AvatarItem,ContentWrapper } from './style';
@@ -15,7 +15,7 @@ class Content extends Component{
                 <ContentWrapper>
                     <Avatar>
                         <img src={AvatarImg} alt="头像"></img>
-                        <AvatarItem className="burc">这里是柏成BurC的官方博客</AvatarItem>
+                        <AvatarItem className="burc">这里是柏成✘の博客</AvatarItem>
                         <AvatarItem>6年+经验 | 前端开发工程师</AvatarItem>
                     </Avatar>
                     
@@ -102,8 +102,8 @@ class Content extends Component{
                 <ContentWrapper className="phone">
                     <Avatar>
                         <img src={AvatarImg} alt="头像"></img>
-                        <AvatarItem className="burc">这里是柏成BurC的官方博客</AvatarItem>
-                        <AvatarItem>6年前端开发工程师 | 专注企业级应用开发</AvatarItem>
+                        <AvatarItem className="burc">这里是柏成✘の博客</AvatarItem>
+                        <AvatarItem>6年+经验 | 前端开发工程师</AvatarItem>
                     </Avatar>
                     
                     <Divider className="divider" orientation="left">个人简介</Divider>

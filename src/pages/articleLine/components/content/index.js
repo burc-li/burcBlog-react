@@ -35,7 +35,10 @@ class Content extends Component{
                                 lineList.map((item,index)=>{
                                     return(
                                         <Link to = {"/detail/"+item.get('id')}>
-                                            <Timeline.Item className='item' key={index}>{item.get('title')}<span className="iconfont"></span>{item.get('createdate')}</Timeline.Item>
+                                            <Timeline.Item className='item' key={index}>
+                                                <span>{item.get('title')}</span>
+                                                <span className="itemDate">{item.get('createdate')}</span>
+                                            </Timeline.Item>
                                         </Link>
                                     );
                                 })
@@ -69,7 +72,10 @@ class Content extends Component{
                                 lineList.map((item,index)=>{
                                     return(
                                         <Link to = {"/detail/"+item.get('id')}>
-                                            <Timeline.Item className='item' key={index}>{item.get('title')}<span className="iconfont"></span>{item.get('createdate')}</Timeline.Item>
+                                            <Timeline.Item className='item' key={index}>
+                                                <span>{item.get('title')}</span>
+                                                <span className="itemDate">{item.get('createdate')}</span>
+                                            </Timeline.Item>
                                         </Link>
                                     );
                                 })

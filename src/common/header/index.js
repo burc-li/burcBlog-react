@@ -3,7 +3,7 @@ import { HeaderWrapper,Logo,SearchWrapper,SearchInput,NavItem,Menu,MenuItem,Logi
 import { CSSTransition } from 'react-transition-group';
 import 'antd/dist/antd.css';
 import { Button,Alert  } from 'antd';
-import LogoImg from '../../statics/brandicon.png';
+import LogoImg from '../../statics/diagramX.svg';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import * as actionCreators from '../store/actionCreators'
@@ -18,7 +18,7 @@ class Header extends Component {
                     {/* <Col className="col" xs={{ span: 24, offset: 0 }} md={{ span: 22, offset: 1 }} lg={{ span: 18, offset: 3 }}> */}
                          {/* 电脑平板 >=768px */}
                         <MediaQuery minWidth={768}>
-                            <Logo className="desktop"><img alt="BurCha" src={LogoImg} />柏成BurC</Logo>
+                            <Logo className="desktop"><img alt="BurCha" src={LogoImg} />柏成✘</Logo>
                             <SearchWrapper className="desktop">
                                 <CSSTransition
                                     in={this.props.focus}
@@ -76,9 +76,9 @@ class Header extends Component {
                             <NavItem className="left" onClick={this.props.navShowHide}>
                                 <span className="iconfont zoom">&#xe663;</span>
                             </NavItem>
-                            <Logo className="phone">
-                                <img alt="BurCha" src={LogoImg} />柏成BurC
-                            </Logo>
+                            {/* <Logo className="phone">
+                                <img alt="BurCha" src={LogoImg} />柏成✘
+                            </Logo> */}
                             <Menu className={this.props.loginNavShow?"show":"hide"}>
                                 <MenuItem>
                                     <SearchWrapper className="phone">

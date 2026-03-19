@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import BgImg from '../../statics/uchu01.bg.jpg';
 
 export const PageWrapper = styled.div`
 &.container {
@@ -8,7 +9,7 @@ export const PageWrapper = styled.div`
   isolation: isolate;
 
   /* 原背景保留 */
-  background: #434343 url(/uchu01.bg.jpg) repeat;
+  background: #434343 url(${BgImg}) repeat;
 }
 
 .row{

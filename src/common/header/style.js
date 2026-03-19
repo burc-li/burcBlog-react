@@ -24,18 +24,27 @@ export const HeaderWrapper = styled.div`
 }
 `;
 export const Logo = styled.div`
+    display: flex;
+    align-items: center;
     height:54px;
     font-size:18px;
     font-weight:700;
     cursor:pointer;
     margin-top:3px;
-    &:hover{
-        color:#eee;
-    }
+    color: #F1F3F4;
+    margin-left: 42px;
     img{
         vertical-align: middle;
-        height:52px;
-        weight:52px;
+        height:32px;
+        width:32px;
+        padding:4px;
+        border-radius:4px;
+        background: rgba(255, 255, 255, 0.92);
+        box-shadow:
+            0 0 0 1px rgba(255, 255, 255, 0.28),
+            0 4px 10px rgba(0, 0, 0, 0.28);
+        object-fit: contain;
+        margin-right:8px;
     }
     &.desktop{
         position:absolute;

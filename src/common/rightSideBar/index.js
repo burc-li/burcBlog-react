@@ -57,7 +57,7 @@ class RightSideBar extends Component{
                         </TagBox>
                         <BlogBox>
                             <Title>博客信息</Title>
-                            <BlogInfo>柏成BurC运行<span>{this.getDays()}</span>天</BlogInfo>
+                            <BlogInfo>柏成✘运行<span>{this.getDays()}</span>天</BlogInfo>
                         </BlogBox>
                         <LinkBox>
                             <Title>友情链接</Title>

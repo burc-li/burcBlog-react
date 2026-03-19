@@ -56,7 +56,7 @@ export const Avatar = styled.div`
         display:block;
         margin:10px auto;
         // border:1px solid #CCC;
-        border-radius:40% 40% 2% 40%;
+        // border-radius:40% 40% 2% 40%;
     }
 `;
 export const AvatarWord = styled.i`

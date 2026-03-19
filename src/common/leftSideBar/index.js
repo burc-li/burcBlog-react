@@ -2,7 +2,7 @@ import React,{ Component,Fragment } from 'react';
 import { LeftSideBarWrapper,SideBarScroll,Avatar,AvatarWord,AvatarItem,Nav,NavItem,Footer,FooterItem, Img, TagLabel } from './style';
 import { CSSTransition } from 'react-transition-group';
 import 'antd/dist/antd.css';
-import AvatarImg from '../../statics/headicon.jpg';
+import AvatarImg from '../../statics/diagramX.svg';
 import MediaQuery from 'react-responsive';
 import { connect } from 'react-redux';
 import * as actionCreators from '../store/actionCreators'
@@ -46,7 +46,7 @@ class LeftSideBar extends Component {
                             <Avatar onMouseDown ={(e)=>{this.props.wordMouseDown(this.LeftSideBarWrapper,this.props.currWord,e,"desktop")}} onMouseUp={this.props.wordMouseUp}>
                                 {this.clickShowWord()}
                                 <img src={AvatarImg} alt="头像"></img>
-                                <AvatarItem className='identity'>前端程序员</AvatarItem>
+                                <AvatarItem className='identity'>柏成✘</AvatarItem>
                                 <AvatarItem>人间不正经生活手册</AvatarItem>
                             </Avatar>
                             <Divider className="divider"></Divider>
@@ -100,7 +100,7 @@ class LeftSideBar extends Component {
                                 <Avatar onMouseDown ={(e)=>{this.props.wordMouseDown(this.LeftSideBarWrapper,this.props.currWord,e,"phone")}} onMouseUp={this.props.wordMouseUp}>
                                 {this.clickShowWord()}
                                 <img src={AvatarImg} alt="头像"></img>
-                                <AvatarItem className='identity'>前端程序员</AvatarItem>
+                                <AvatarItem className='identity'>柏成✘</AvatarItem>
                                 <AvatarItem>人间不正经生活手册</AvatarItem>
                             </Avatar>
                             {/* 导航栏 */}

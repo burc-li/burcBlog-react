@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const PageWrapper = styled.div`
 &.container{
-    background: #434343 url(/uchu01.bg.jpg) repeat scroll 0 0;
+    background: #434343 url(/images/uchu01.bg.jpg) repeat scroll 0 0;
     overflow: hidden;
     isolation: isolate;
     position:absolute;

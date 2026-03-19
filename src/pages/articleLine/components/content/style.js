@@ -59,6 +59,13 @@ export const TimeLineBox = styled.ul`
         color:#58666E;
         cursor:pointer;
     }
+    .itemDate{
+        display:block;
+        margin-top:4px;
+        color:#999;
+        font-size:13px;
+        line-height:1.4;
+    }
     .iconfont{
         color:#999;
         padding:0 5px 0 15px;

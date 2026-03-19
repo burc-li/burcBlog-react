@@ -63,7 +63,7 @@ class ArticlePanel extends PureComponent{
                {/* defaultPageSize	默认的每页条数 */}
                {/* total	        数据总数 */}
                {
-                   Math.ceil(totalCount/pageSize)>1?
+                   SkeletonShow && Math.ceil(totalCount/pageSize)>1?
                     <Pagination className="pagination" defaultCurrent={1} current={currentPage} defaultPageSize={pageSize} total={totalCount}  onChange={(page, pageSize)=>{changePage(articleType,keyword,page, pageSize,this.refs.pag,getCodeData)}}/>
                     :''
                }              
@@ -102,9 +102,9 @@ class ArticlePanel extends PureComponent{
         this.props.initType(articleType,keyword,search);
 
         // console.log("在组件被挂载到页面",articleType,keyword)
-        setTimeout(()=>{
+        // setTimeout(()=>{
             this.props.getCodeData(articleType,keyword,1,this.props.pageSize);
-        },400)
+        // },1000)
         this.props.getTotalCount(articleType,keyword);
         this.props.addBlogState();
         this.props.updateBlogState();

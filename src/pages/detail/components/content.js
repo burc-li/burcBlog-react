@@ -49,9 +49,9 @@ class Content extends PureComponent{
         // const id =this.props.location.pathname.match(/\d+/g)[0];
         const id =this.props.match.params.id;
         // 根据博客id获取博客详细内容
-        setTimeout(()=>{
+        // setTimeout(()=>{
             this.props.getDetail(id);
-        },400);
+        // },4000);
         // 根据博客id获取该博客的评论
         // this.props.getComment(id);  
     }

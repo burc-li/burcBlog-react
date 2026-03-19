@@ -191,37 +191,49 @@ export const ArticalInfo = styled.div`
         font-size: 13px;
         line-height: 1.75;
         padding: 14px 16px 16px;
-        white-space: pre-wrap;
-        word-break: break-word;
-        overflow-wrap: anywhere;
+        max-height: 800px;
+        white-space: pre;
+        word-break: normal;
+        overflow-wrap: normal;
         overflow-x: auto;
-        overflow-y: hidden;
+        overflow-y: auto;
         border: none;
         border-radius: 0 0 6px 6px;
         background: #26292E;
         color: #f5f5f7;
+        scrollbar-width: thin;
+        scrollbar-color: #7f8694 #2b3038;
     }
 
     .hljs {
         background: #26292E !important;
         color: #f5f5f7;
-        white-space: pre-wrap;
-        word-break: break-word;
-        overflow-wrap: anywhere;
+        white-space: pre;
+        word-break: normal;
+        overflow-wrap: normal;
     }
     pre code::-webkit-scrollbar {
-        height: 8px;
+        height: 10px;
+        width: 10px;
     }
     pre code::-webkit-scrollbar-track {
-        background: #2b2b2d;
-        border-radius: 8px;
+        background: #2b3038;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
     }
     pre code::-webkit-scrollbar-thumb {
-        background: #5a5a5f;
-        border-radius: 8px;
+        background: linear-gradient(180deg, #8f97a7 0%, #6f7786 100%);
+        border-radius: 999px;
+        border: 2px solid #2b3038;
     }
     pre code::-webkit-scrollbar-thumb:hover {
-        background: #727278;
+        background: linear-gradient(180deg, #a4adbe 0%, #818a9b 100%);
+    }
+    pre code::-webkit-scrollbar-thumb:active {
+        background: linear-gradient(180deg, #b2bbcd 0%, #8d96a8 100%);
+    }
+    pre code::-webkit-scrollbar-corner {
+        background: #2b3038;
     }
 
 

@@ -125,18 +125,22 @@ export const Button = styled.button`
     }
 `;
 export const SkeletonBox = styled.div`
-    background:#FFF;
-    padding:20px;
-    .ant-skeleton-title,.ant-skeleton-paragraph>li{
-        background-image: linear-gradient(90deg, #CCC 25%, #999 37%, #CCC 63%)!important;
-        background-position-x: initial!important;
-        background-position-y: initial!important;
-        background-size: 400% 100%!important;
-        background-repeat-x: initial!important;
-        background-repeat-y: initial!important;
-        background-attachment: initial!important;
-        background-origin: initial!important;
-        background-clip: initial!important;
-        background-color: initial!important;
+    background: rgba(255, 255, 255, 0.4);
+    min-height: calc(100vh - 150px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    .pageSpinner{
+        width:40px;
+        height:40px;
+        border-radius:50%;
+        border:3px solid rgba(148, 163, 184, 0.35);
+        border-top-color:#DE5E60;
+        animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin{
+        to{
+            transform: rotate(360deg);
+        }
     }
 `;

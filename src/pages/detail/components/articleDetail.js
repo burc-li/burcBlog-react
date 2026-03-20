@@ -47,9 +47,9 @@ class ArticleDetail extends PureComponent{
                     </ArticalFooter>
                 </ArticalBox>
                  :
-                <SkeletonBox>
-                    <Skeleton active  paragraph={{ rows: 25}} />
-                </SkeletonBox>
+                 <SkeletonBox>
+                    <div className="pageSpinner"></div>
+                 </SkeletonBox>
             }
             </Fragment>
         )

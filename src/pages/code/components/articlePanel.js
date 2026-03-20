@@ -5,7 +5,7 @@ import { ArticleBox,ArticleItem,ArticleHeader,ArticleInfo,ArticleFooter,Button,S
 import * as actionCreators from '../store/actionCreators';
 import { updateBlog } from '../../update/store/actionCreators';
 import { addBlog } from '../../write/store/actionCreators';
-import { Pagination,Skeleton,Empty  } from 'antd';
+import { Pagination,Empty  } from 'antd';
 
 
 class ArticlePanel extends PureComponent{
@@ -55,7 +55,7 @@ class ArticlePanel extends PureComponent{
                         })
                         :<Empty />
                     :<SkeletonBox>
-                        <Skeleton active  paragraph={{ rows: 25}} />
+                        <div className="pageSpinner"></div>
                     </SkeletonBox>
                }
                {/* defaultCurrent	默认的当前页数 */}

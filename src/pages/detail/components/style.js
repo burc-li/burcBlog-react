@@ -141,7 +141,7 @@ export const ArticalInfo = styled.div`
         font-family: "Fira Code", "Consolas", "Monaco", monospace;
         font-size: 0.85em;
         line-height: 1.45;
-        color:#de5e60;
+        color: #de5e60;
         border: 1px solid rgba(27, 31, 36, 0.1);
         background-color: #f6f8fa;
         border-radius: 2px;
@@ -246,7 +246,7 @@ export const ArticalInfo = styled.div`
     /* ul ol 样式 */
     ul, ol {
         margin: 12px 0 12px 2em;
-        padding-left: 0.6em;
+        padding-left: 0.3em;
         line-height: 1.9em;
         color: #4b5563;
     }
@@ -266,7 +266,6 @@ export const ArticalInfo = styled.div`
     ul li::marker,
     ol li::marker{
         color: #333333;
-        font-weight: 600;
     }
     @media (max-width: 991px){
         ul, ol{

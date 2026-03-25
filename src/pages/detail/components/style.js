@@ -58,7 +58,7 @@ export const ArticalInfo = styled.div`
     
     /* 字体 样式 */
     p{
-        text-indent:2em;
+        // text-indent:2em;
         font-size:15px;
         line-height:1.8em;
         margin-bottom:12px;
@@ -130,7 +130,7 @@ export const ArticalInfo = styled.div`
         display: block;
         border-left: 12px solid #d0e5f2;
         padding: 12px 20px;
-        margin: 12px 2em 12px 2em;
+        margin: 12px 0em 12px 0em;
         line-height: 1.6em;
         font-size: 100%;
         background-color: #F1F3F4;
@@ -139,13 +139,16 @@ export const ArticalInfo = styled.div`
     /* 行内代码 */
     code:not(pre code) {
         font-family: "Fira Code", "Consolas", "Monaco", monospace;
-        font-size: 0.9em;
-        color: #ff7ab8;
-        border: 1px solid #3d3d3d;
-        background-color: #1f1f1f;
-        border-radius: 5px;
-        padding: 2px 7px;
-        margin: 0 3px;
+        font-size: 0.85em;
+        line-height: 1.45;
+        color:#de5e60;
+        border: 1px solid rgba(27, 31, 36, 0.1);
+        background-color: #f6f8fa;
+        border-radius: 2px;
+        padding: 0.2em 0.4em;
+        margin: 0 0.1em;
+        box-shadow: none;
+        word-break: break-word;
     }
 
     /* 代码块 */
@@ -242,11 +245,34 @@ export const ArticalInfo = styled.div`
 
     /* ul ol 样式 */
     ul, ol {
-        margin: 10px 0 10px 3.4em;
-        line-height:1.8em;
+        margin: 12px 0 12px 2em;
+        padding-left: 0.6em;
+        line-height: 1.9em;
+        color: #4b5563;
+    }
+    li{
+        margin: 4px 0;
+    }
+    li > ul,
+    li > ol{
+        margin: 6px 0 6px 1.4em;
     }
     ul{
-        list-style:square;
+        list-style: disc;
+    }
+    ol{
+        list-style: decimal;
+    }
+    ul li::marker,
+    ol li::marker{
+        color: #333333;
+        font-weight: 600;
+    }
+    @media (max-width: 991px){
+        ul, ol{
+            margin: 10px 0 10px 1.4em;
+            padding-left: 0.3em;
+        }
     }
 
     /* img 样式 */
@@ -254,7 +280,7 @@ export const ArticalInfo = styled.div`
         box-shadow: 0 2px 8px rgba(15, 23, 42, 0.1);
         border-radius:10px;
         border:1px solid #e6eaf0;
-        max-width: 92%!important;
+        max-width: calc(100% - 4em) !important;
         width: auto;
         height: auto;
         max-height: 560px;

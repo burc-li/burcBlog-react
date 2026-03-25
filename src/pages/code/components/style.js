@@ -63,12 +63,10 @@ export const ArticleInfo = styled.div`
         color:#58666E;
         padding:0px;
         margin:0px;
-        display: inline;
-    }
-    p:nth-child(1):after{
-        content:'[...]';
-        margin-left:4px;
-        display:inline;
+        display:block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     p:nth-child(n+2){
         display:none;

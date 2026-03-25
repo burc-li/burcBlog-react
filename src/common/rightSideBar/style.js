@@ -15,26 +15,28 @@ export const RightSideBarWrapper = styled.div`
     line-height:1.5em;
 `;
 export const ArticleBox = styled.div`
+    width: calc(100% - 5px);
     border-bottom:1px solid rgba(0,0,0,.1);
     background:#fff;
-    padding:20px;
+    padding: 18px 10px;
     &.tocPanel{
-        padding:14px 16px 10px 5px;
+        padding:14px 16px 10px 4px;
+        // border-bottom: none;
     }
 `;
 export const TagBox = styled.div`
     border-bottom:1px solid rgba(0,0,0,.1);
     background:#fff;
-    padding:20px;
+    padding: 18px 10px;
 `;
 export const BlogBox = styled.div`
     border-bottom:1px solid rgba(0,0,0,.1);
     background:#fff;
-    padding:20px;
+    padding: 18px 10px;
 `;
 export const LinkBox = styled.div`
     background:#fff;
-    padding:20px;
+    padding: 18px 10px;
 `;
 export const ArticleInfo = styled.div`
     color:#58666E;
@@ -43,7 +45,6 @@ export const ArticleInfo = styled.div`
     &.tocList{
         max-height: calc(100vh - 115px);
         overflow: auto;
-        padding: 0 2px 0 1px;
         scrollbar-width: thin;
         scrollbar-color: rgba(148, 163, 184, 0.5) rgba(241, 245, 249, 0.9);
     }
@@ -149,16 +150,17 @@ export const BlogInfo = styled.div`
     }
 `;
 export const Title = styled.div`
-    font-size:16px;
-    color:#58666E;
-    margin-bottom:10px;
+    font-size:15px;
+    color:#475569;
+    font-weight:600;
+    margin-bottom:6px;
     &.tocTitle{
         font-size:15px;
         color:#475569;
         font-weight:600;
         margin-bottom:6px;
         padding:0 6px 6px 6px;
-        border-bottom:1px solid #eef2f6;
+        border-bottom:1px solid rgba(0,0,0,.1);
     }
 `;
 export const LinkItem = styled.a.attrs({

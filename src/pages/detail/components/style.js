@@ -265,7 +265,7 @@ export const ArticalInfo = styled.div`
     }
     ul li::marker,
     ol li::marker{
-        color: #333333;
+        // color: #333333;
     }
     @media (max-width: 991px){
         ul, ol{

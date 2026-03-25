@@ -73,7 +73,7 @@ export const PageRightWrapper = styled.div`
     bottom:0px;
     z-index:77;
     background:#EDF1F2;
-    overflow-y: scroll;
+    overflow: hidden;
     overflow-x: hidden;
 
     &.desktop{
@@ -91,11 +91,11 @@ export const PageRight = styled.div`
     position:absolute;
     background:#EDF1F2;
     top:0px;
-    // bottom:0;
+    bottom:0;
     left:0px;
     right:0px;
     z-index:888;
-    min-height:100%;
+    height:100%;
 
     &.clearfix:before,&.clearfix:after{
         content:'';
@@ -112,17 +112,40 @@ export const PageContent = styled.div`
     // border:3px solid #000;
     background:#EDF1F2;
     position:relative;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(148, 163, 184, 0.5) rgba(241, 245, 249, 0.9);
+
+    &::-webkit-scrollbar{
+        width:8px;
+    }
+    &::-webkit-scrollbar-track{
+        background: rgba(226, 232, 240, 0.9);
+        border-radius:8px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: linear-gradient(180deg, #96A0B2 0%, #7B8699 100%);
+        border-radius:8px;
+    }
+    &::-webkit-scrollbar-thumb:hover{
+        background: linear-gradient(180deg, #A7B1C3 0%, #8A95A8 100%);
+    }
     
     &.desktop{
-        margin-right:180px;
-        // min-height:100%;
+        margin-right:200px;
+        height:100%;
+        overflow-y:auto;
+        overflow-x:hidden;
     }
     &.ipad{
-        min-height:100%;
+        height:100%;
         margin-right:15px;
+        overflow-y:auto;
+        overflow-x:hidden;
     }
     &.phone{
-        min-height:100%;
+        height:100%;
         margin-right:0px;
+        overflow-y:auto;
+        overflow-x:hidden;
     }
 `;

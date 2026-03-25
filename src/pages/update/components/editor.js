@@ -52,7 +52,7 @@ class Editor extends PureComponent{
                 <ArticalTitle>
                     <p>{title}</p>
                 </ArticalTitle>
-                <ArticalInfo ref={(el) => (this.articleRef = el)}  dangerouslySetInnerHTML={{ __html: this.formatContent(content) }}>
+                <ArticalInfo className="article-content-root" ref={(el) => (this.articleRef = el)}  dangerouslySetInnerHTML={{ __html: this.formatContent(content) }}>
                 </ArticalInfo>
              </ArticalBox>
             </EditorBox>

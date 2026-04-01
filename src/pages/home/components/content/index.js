@@ -78,7 +78,7 @@ class Content extends Component{
                     <p style={{ textIndent: 0 }}><i className="iconfont">&#xe646;</i><strong style={{ color: '#58666E' }}>全栈基础</strong>：熟悉 Node.js + MySQL 简单后端开发，具备 Docker 容器部署与 Nginx 反向代理实战经验</p>
 
                     <Divider className="divider" orientation="left">荣誉奖项</Divider>
-                    <p style={{ textIndent: 0 }}><i className="iconfont">&#xe646;</i><strong style={{ color: '#58666E' }}>技术专利</strong>：《用于画布的超链接文本绘制方法》（CN202311528257.X）</p>
+                    <p style={{ textIndent: 0 }}><i className="iconfont">&#xe646;</i><strong style={{ color: '#58666E' }}>技术专利</strong>：<a target="_blank" rel="noopener noreferrer" href="https://cpquery.cponline.cnipa.gov.cn/detail/index?zhuanlisqh=ZMW1vbwLwaOrMZ4BcNrEqg%253D%253D&anjianbh&searchType=1">用于画布的超链接文本绘制方法（申请号：202311528257.X，申请中）</a></p>
                     <p style={{ textIndent: 0 }}><i className="iconfont">&#xe646;</i><strong style={{ color: '#58666E' }}>竞赛奖项</strong>：第十六届挑战杯二等奖、山东省软件设计大赛二等奖</p>
                     <p style={{ textIndent: 0 }}><i className="iconfont">&#xe646;</i><strong style={{ color: '#58666E' }}>学术荣誉</strong>：国家励志奖学金、国家级大学生创新创业训练计划结题</p>
                     <p style={{ textIndent: 0 }}><i className="iconfont">&#xe646;</i>掘金 2024 年度人气作者 TOP 50</p>
@@ -165,7 +165,7 @@ class Content extends Component{
                     <p style={{ textIndent: 0 }}><i className="iconfont">&#xe646;</i><strong style={{ color: '#58666E' }}>全栈基础</strong>：熟悉 Node.js + MySQL 简单后端开发，具备 Docker 容器部署与 Nginx 反向代理实战经验</p>
 
                     <Divider className="divider" orientation="left">荣誉奖项</Divider>
-                    <p style={{ textIndent: 0 }}><i className="iconfont">&#xe646;</i><strong style={{ color: '#58666E' }}>技术专利</strong>：《用于画布的超链接文本绘制方法》（CN202311528257.X）</p>
+                    <p style={{ textIndent: 0 }}><i className="iconfont">&#xe646;</i><strong style={{ color: '#58666E' }}>技术专利</strong>：<a target="_blank" rel="noopener noreferrer" href="https://cpquery.cponline.cnipa.gov.cn/detail/index?zhuanlisqh=ZMW1vbwLwaOrMZ4BcNrEqg%253D%253D&anjianbh&searchType=1">用于画布的超链接文本绘制方法（申请号：202311528257.X，申请中）</a></p>
                     <p style={{ textIndent: 0 }}><i className="iconfont">&#xe646;</i><strong style={{ color: '#58666E' }}>竞赛奖项</strong>：第十六届挑战杯二等奖、山东省软件设计大赛二等奖</p>
                     <p style={{ textIndent: 0 }}><i className="iconfont">&#xe646;</i><strong style={{ color: '#58666E' }}>学术荣誉</strong>：国家励志奖学金、国家级大学生创新创业训练计划结题</p>
                     <p style={{ textIndent: 0 }}><i className="iconfont">&#xe646;</i>掘金 2024 年度人气作者 TOP 50</p>

@@ -46,8 +46,8 @@ class Home extends Component{
                                      {/* 页面中间内容 */}
                                      <PageContent className="desktop">
                                          <Content></Content>
+                                         <Footer></Footer>
                                      </PageContent>
-                                    <Footer></Footer>
                                 </PageRight>
                             </PageRightWrapper>
                         </MediaQuery>
@@ -65,8 +65,8 @@ class Home extends Component{
                                      {/* 页面中间内容 */}
                                      <PageContent className="ipad">
                                         <Content></Content>
+                                        <Footer></Footer>
                                      </PageContent>
-                                    <Footer></Footer>
                                 </PageRight>
                             </PageRightWrapper>
                         </MediaQuery>

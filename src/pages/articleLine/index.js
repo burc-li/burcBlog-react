@@ -74,7 +74,7 @@ class ArticleLine extends Component{
                                         {/* 页面中间内容 */}
                                         <PageContent className="phone">
                                             <Content></Content>
-                                            <Footer></Footer>
+                                            {/* <Footer></Footer> */}
                                         </PageContent>
                                     </PageRightWrapper>
                                 </PageSlide>

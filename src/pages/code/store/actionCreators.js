@@ -1,6 +1,12 @@
 import axios from 'axios';
 import * as actionTypes from './actionTypes';
 
+// 防止移动端/媒体查询导致同组件重复挂载时，同参数接口并发重复请求
+// key: articletype|keyword|currentPage|pageSize
+const inflightCodeArticleRequests = {};
+// key: articletype|keyword
+const inflightCodeArticleCountRequests = {};
+
 const changeCodeData = (result,currentPage)=>{
     return {
         type:actionTypes.CHANGE_CODE_DATA,
@@ -38,6 +44,12 @@ export const clearCodeDataAction = ()=>{
 
 export const getTotalAction = (articleType,keyword)=>{
     return (dispatch)=>{       
+        const requestKey = `${articleType}|${keyword}`;
+        if(inflightCodeArticleCountRequests[requestKey]){
+            return;
+        }
+        inflightCodeArticleCountRequests[requestKey] = true;
+
         axios.post('/api/blog/count', {
         // axios.post('https://www.easy-mock.com/mock/5d48fd5ffc529c75f94136fd/api/blog/count', {
             articletype: articleType,
@@ -52,11 +64,19 @@ export const getTotalAction = (articleType,keyword)=>{
             }
         }).catch(()=>{
             console.log("获获取文章数量error");
+        }).finally(()=>{
+            delete inflightCodeArticleCountRequests[requestKey];
         });
     }
 }
 export const getCodeDataAction = (articleType,keyword,currentPage,pageSize,winDesktop,winPhone)=>{
     return (dispatch)=>{       
+        const requestKey = `${articleType}|${keyword}|${currentPage}|${pageSize}`;
+        if(inflightCodeArticleRequests[requestKey]){
+            return;
+        }
+        inflightCodeArticleRequests[requestKey] = true;
+
         axios.post('/api/blog/article', {
         // axios.post('https://www.easy-mock.com/mock/5d48fd5ffc529c75f94136fd/api/blog/article', {
             articletype: articleType,
@@ -80,13 +100,19 @@ export const getCodeDataAction = (articleType,keyword,currentPage,pageSize,winDe
                 }
                 const action = changeCodeData(result,currentPage);
                 dispatch(action);
-                winDesktop.scrollTo(0,0);
-                winPhone.scrollTo(0,0);
+                if(winDesktop && winDesktop.scrollTo){
+                    winDesktop.scrollTo(0,0);
+                }
+                if(winPhone && winPhone.scrollTo){
+                    winPhone.scrollTo(0,0);
+                }
             // }else{
                 // alert("获取文章列表失败")
             // }
         }).catch(()=>{
             // console.log("获取文章列表error");
+        }).finally(()=>{
+            delete inflightCodeArticleRequests[requestKey];
         });
     }
 }

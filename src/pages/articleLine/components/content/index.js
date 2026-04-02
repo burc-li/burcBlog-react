@@ -13,7 +13,7 @@ class Content extends Component{
         return(
             <Fragment>
             {/* 电脑 平板>=768px */}
-            <MediaQuery minWidth={768}>
+            <MediaQuery minWidth={768} defaultMatches={false} debounceTime={200}>
                 <ContentWrapper>
                     <Breadcrumb className="breadcrumb">
                         <Breadcrumb.Item className="breadcrumbTitle">
@@ -49,7 +49,7 @@ class Content extends Component{
                 </ContentWrapper>
             </MediaQuery>
             {/* 手机>=768px */}
-            <MediaQuery maxWidth={767}>
+            <MediaQuery maxWidth={767} defaultMatches={false} debounceTime={200}>
                 <ContentWrapper className = 'phone'>
                     <Breadcrumb className="breadcrumb">
                         <Breadcrumb.Item className="breadcrumbTitle">

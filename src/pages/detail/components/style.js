@@ -43,13 +43,14 @@ export const ArticalBox = styled.div`
 export const ArticalTitle = styled.div`
     background:#FFF;
     p{
-        text-align:center;
-        font-size:22px;
+        // text-align:center;
+        font-size:30px;
         margin-bottom:30px;
         font-weight:600;
-        white-space:nowrap;
-        overflow:hidden;
-        text-overflow:ellipsis;
+        line-height:1.4em;
+        // white-space:nowrap;
+        // overflow:hidden;
+        // text-overflow:ellipsis;
     }
 
 `;

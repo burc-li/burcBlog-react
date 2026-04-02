@@ -125,7 +125,7 @@ class RightSideBar extends Component{
                                                 return(
                                                     <ArticleItem  key={index}>
                                                         <Link to = {"/"+detail+"/"+item.get('id')}>
-                                                            <ArticleTitle>{item.get('title')}</ArticleTitle>
+                                                            <ArticleTitle tooltip title={item.get('title')}>{item.get('title')}</ArticleTitle>
                                                         </Link>
                                                         <ArticleAuthor><span className="iconfont">&#xe655;</span>{item.get('author')}</ArticleAuthor>
                                                     </ArticleItem>

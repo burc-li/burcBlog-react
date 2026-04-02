@@ -38,7 +38,7 @@ class ArticleDetail extends PureComponent{
                 title? 
                 <ArticalBox>
                     <ArticalTitle>
-                        <p>{title}</p>
+                        <p tooltip title={title}>{title}</p>
                     </ArticalTitle>
                     <ArticalInfo className="article-content-root" ref={(el) => (this.articleRef = el)} dangerouslySetInnerHTML={{ __html: this.formatContent(content) }}>
                     </ArticalInfo>

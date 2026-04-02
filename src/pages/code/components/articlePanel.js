@@ -27,15 +27,27 @@ class ArticlePanel extends PureComponent{
                             return(
                                 // immutable 对象获取内容 item.get('id')
                                 //普通JS对象获取内容 item['id']
-                                <ArticleItem  key={index}>
+                                <ArticleItem
+                                    key={index}
+                                    onClick={(e) => {
+                                        // 排除删除/修改按钮区域：该区域内点击保持原逻辑
+                                        const actionArea = e.target && e.target.closest && e.target.closest('.article-action');
+                                        if (actionArea) return;
+
+                                        // 标题/简介本身已经是 Link，避免重复 push
+                                        const anchorEl = e.target && e.target.closest && e.target.closest('a');
+                                        if (anchorEl) return;
+
+                                        this.props.history.push('/detail/' + item.get('id'));
+                                    }}
+                                    style={{ cursor: 'pointer' }}
+                                >
                                     <ArticleHeader>
                                         {/* 地址栏传递id */}
-                                        <Link to = {"/detail/"+item.get('id')}>
-                                            <p>{item.get('title')}</p>
-                                        </Link>
+                                            <p tooltip title={item.get('title')}>{item.get('title')}</p>
                                     </ArticleHeader>
                                     <ArticleInfo>
-                                      <p>{item.get('abstract')}</p>
+                                        <p>{item.get('abstract')}</p>
                                     </ArticleInfo>
                                     <ArticleFooter>
                                         <ul>
@@ -44,7 +56,7 @@ class ArticlePanel extends PureComponent{
                                             <li className="left"><span className="iconfont">&#xe64b;</span>{item.get('commentcount')}</li>
                                         </ul>
                                         {this.props.loginState?
-                                        <ul> 
+                                        <ul className="article-action"> 
                                             <li className="right"> <Button  onClick={()=>{this.props.deleteBlog(item.get('id'))}}>删除</Button></li>
                                             <li className="right"> <Link to={"/update/"+item.get('id')}><Button className='udp'>修改</Button></Link> </li>
                                         </ul> 

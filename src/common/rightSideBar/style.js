@@ -15,7 +15,7 @@ export const RightSideBarWrapper = styled.div`
     line-height:1.5em;
 `;
 export const ArticleBox = styled.div`
-    width: calc(100% - 5px);
+    width: calc(100% - 14px);
     border-bottom:1px solid rgba(0,0,0,.1);
     background:#fff;
     padding: 18px 10px;

@@ -66,7 +66,7 @@ class Content extends Component{
                 {/* 电脑 平板>=768px */}
                 <MediaQuery minWidth={768}>
                 <ContentWrapper>
-                    <Breadcrumb className="breadcrumb">
+                    <Breadcrumb className="breadcrumb" style={{borderRadius:'2px'}}>
                         <Breadcrumb.Item className="breadcrumbTitle">
                             当前位置：
                         </Breadcrumb.Item>
@@ -131,7 +131,7 @@ class Content extends Component{
             {/* 手机>=768px */}
             <MediaQuery maxWidth={767}>
             <ContentWrapper className="phone">
-                    <Breadcrumb className="breadcrumb">
+                    <Breadcrumb className="breadcrumb" style={{borderRadius:'2px'}}>
                         <Breadcrumb.Item className="breadcrumbTitle">
                             当前位置：
                         </Breadcrumb.Item>

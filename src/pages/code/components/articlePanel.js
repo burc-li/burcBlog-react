@@ -65,7 +65,7 @@ class ArticlePanel extends PureComponent{
                                 </ArticleItem>
                             );
                         })
-                        :<Empty />
+                        :<Empty style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',minHeight:'60vh'}} />
                     :<SkeletonBox>
                         <div className="pageSpinner"></div>
                     </SkeletonBox>

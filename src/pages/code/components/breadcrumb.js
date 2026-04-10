@@ -8,7 +8,7 @@ class BreadCrumb extends PureComponent{
         const { articleType,keyword } = this.props;
         return(
             <Fragment>
-               <Breadcrumb className="breadcrumb">
+               <Breadcrumb className="breadcrumb" style={{borderRadius:'2px'}}>
                     <Breadcrumb.Item className="breadcrumbTitle">
                         当前位置：
                     </Breadcrumb.Item>

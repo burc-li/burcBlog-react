@@ -62,21 +62,20 @@ export const SearchWrapper = styled.div`
     .zoom{
         position:absolute;
         right:0px;
-        border-radius:0 13px 13px 0;
         line-height:30px;
         text-align:center;
         width:30px;
         cursor:pointer;
         color:#fff;
         background:#DE5E60;
+        border-radius: 0 2px 2px 0;
     }
     .zoomDesktop{
-        top:12px;
     }
     &.desktop{
         display:inline-block;
         height:54px;
-        padding:12px 0;
+        padding:14px 0;
         margin-left:300px;
     }
     .zoomPhone{
@@ -94,33 +93,16 @@ export const SearchInput = styled.input.attrs({
     placeholder:'输入关键词搜索...'
 })`
     font-size:14px;
-    width:160px;
+    width:200px;
     background:#fff;
     height:30px;
     border:none;
     outline:0;
     color:#000;
-    border-radius:13px;
-    padding-left:1em;
+    padding-left:0.8em;
+    border-radius: 2px;
     &::placeholder{
         color:#999;
-    }
-    &.focused{
-        width:240px;
-    }
-    &.slide-enter{
-        width:160px;
-    }
-    &.slide-enter-active{
-        width:240px;
-        transition: all 0.4s;
-    }
-    &.slide-exit{
-        width:240px;
-    }
-    &.slide-exit-active{
-        width:160px;
-        transition: all 0.4s;
     }
     &.phone{
         width:100%;

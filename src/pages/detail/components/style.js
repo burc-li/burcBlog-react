@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import  AvatorImg  from '../../../statics/headicon.jpg'
+import  AvatorImg  from '../../../statics/diagramX.svg'
 
 export const ContentWrapper = styled.div`
     // border:1px solid #f00;
@@ -324,11 +324,19 @@ export const CommentHeaderLeft = styled.div`
     padding-right:10px;
 `;
 export const Avator = styled.div`
-    border:1px solid #CCC; 
-    width:50px;
-    height:50px;
-    background:url(${AvatorImg});
-    background-size:cover;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #CCC;
+    padding: 3px;
+    padding-bottom: 4px;
+    background-color: #fff;
+    background-image: url(${AvatorImg});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-origin: content-box;
 `;
 export const CommentHeaderRight = styled.div`
     display: table-cell;
@@ -344,6 +352,9 @@ export const CommentHeaderRight = styled.div`
         &::placeholder{
             color:#999;
         }
+        &:focus{
+            outline:none;
+        }
     }
     input{
         background:#F1F3F4;
@@ -354,6 +365,9 @@ export const CommentHeaderRight = styled.div`
         height:30px;
         &::placeholder{
             color:#999;
+        }
+        &:focus{
+            outline:none;
         }
     }
     &.phone{

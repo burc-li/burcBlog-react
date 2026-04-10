@@ -37,7 +37,7 @@ class Comment extends PureComponent{
                     {/* 电脑 >=1366px */}
                     <MediaQuery minWidth={1366}>
                         <CommentHeaderRight>
-                            <textarea placeholder="请在此输入评论内容..." onChange={changeTextarea} ref={(textarea)=>{this.content=textarea}} value={textarea}></textarea>
+                            <textarea placeholder="请在此输入评论内容..."  style={{ minHeight: '50px' }}   onChange={changeTextarea} ref={(textarea)=>{this.content=textarea}} value={textarea}></textarea>
                             <input placeholder="名字" onChange={changeNameInput} ref={(input)=>{this.fromname=input}} value={nameInput}></input>
                             <input placeholder="E-mail" onChange={changeMailInput} ref={(input)=>{this.mail=input}} value={emailInput}></input>
                             <Button onClick={()=>{addComment(this.props.match.params.id,this.content,this.fromname,toname,this.mail,this.getDate())}}>评论</Button>
@@ -47,7 +47,7 @@ class Comment extends PureComponent{
                     {/* 平板手机 <=1365px */}
                     <MediaQuery maxWidth={1365}>
                         <CommentHeaderRight className="phone">
-                            <textarea placeholder="请在此输入评论内容..." onChange={changeTextarea} ref={(textarea)=>{this.content=textarea}} value={textarea}></textarea>
+                            <textarea placeholder="请在此输入评论内容..." style={{ minHeight: '50px' }}  onChange={changeTextarea} ref={(textarea)=>{this.content=textarea}} value={textarea}></textarea>
                             <input placeholder="名字" onChange={changeNameInput} ref={(input)=>{this.fromname=input}} value={nameInput}></input>
                             <input placeholder="E-mail" onChange={changeMailInput} ref={(input)=>{this.mail=input}} value={emailInput}></input>
                             <Button onClick={()=>{addComment(this.props.match.params.id,this.content,this.fromname,toname,this.mail,this.getDate())}}>评论</Button>

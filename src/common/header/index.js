@@ -30,8 +30,12 @@ class Header extends Component {
                                         onBlur={this.props.inputBlur}
                                         onChange={this.props.inputChange}
                                         value={this.props.inputValue}
-                                        // ref挂载到dom元素上时表示具体的dom元素节点
                                         ref={(SearchInput)=>(this.SearchInput = SearchInput)}
+                                        onKeyDown={(e)=>{
+                                            if(e.key === 'Enter' && this.props.inputValue){
+                                                window.location.hash = "/"+this.props.search+"/"+this.props.inputValue;
+                                            }
+                                        }}
                                         >
                                     </SearchInput>
                                 </CSSTransition>
@@ -85,8 +89,12 @@ class Header extends Component {
                                         <SearchInput className="phone"
                                             value={this.props.inputValue}
                                             onChange={this.props.inputChange}
-                                            // ref挂载到dom元素上时表示具体的dom元素节点
                                             ref={(SearchInput)=>(this.SearchInput = SearchInput)}
+                                            onKeyDown={(e)=>{
+                                                if(e.key === 'Enter' && this.props.inputValue){
+                                                    window.location.hash = "/"+this.props.search+"/"+this.props.inputValue;
+                                                }
+                                            }}
                                         >
                                         </SearchInput>
                                         {

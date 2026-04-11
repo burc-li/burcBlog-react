@@ -73,10 +73,12 @@ export const SearchWrapper = styled.div`
     .zoomDesktop{
     }
     &.desktop{
+        position: absolute;
+        right: 182px;
         display:inline-block;
         height:54px;
         padding:14px 0;
-        margin-left:300px;
+        // margin-left:300px;
     }
     .zoomPhone{
         top:5px;
@@ -101,6 +103,7 @@ export const SearchInput = styled.input.attrs({
     color:#000;
     padding-left:0.8em;
     border-radius: 2px;
+
     &::placeholder{
         color:#999;
     }

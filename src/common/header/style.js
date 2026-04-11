@@ -74,7 +74,8 @@ export const SearchWrapper = styled.div`
     }
     &.desktop{
         position: absolute;
-        right: 182px;
+        // right: 182px;
+        right: 28px;
         display:inline-block;
         height:54px;
         padding:14px 0;

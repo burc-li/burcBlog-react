@@ -4,7 +4,10 @@ import BgImg from '../../statics/uchu01.bg.jpg';
 export const PageWrapper = styled.div`
 &.container {
   position: absolute;
-  inset: 0;
+  top:0;
+  left:0;
+  right:-1px;
+  bottom:0;
   overflow: hidden;
   isolation: isolate;
 
@@ -21,7 +24,7 @@ export const PageWrapper = styled.div`
     position:relative;
     overflow-x: hidden;
     height:100%;
-    transform: translateY(-2px);
+    // transform: translateY(0px);
     background: linear-gradient(180deg, #f9fafc 0%, #f3f5f8 100%);
     box-shadow:
         0 44px 84px rgba(15, 23, 42, 0.24),

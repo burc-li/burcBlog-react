@@ -8,7 +8,7 @@ export const HeaderWrapper = styled.div`
     background: #26292E;
     position:relative;
     border-bottom:2px #DE5E60 solid;
-    height:56px;
+    height:52px;
     color:#B4B6BD;
     // color:#9D9D9D;
 }
@@ -18,7 +18,7 @@ export const HeaderWrapper = styled.div`
 .col{
     position:relative;
     border-bottom:2px #DE5E60 solid;
-    height:56px;
+    height:52px;
     background: #26292E;
     // box-shadow:0 0 10px #26292E;
 }
@@ -26,11 +26,11 @@ export const HeaderWrapper = styled.div`
 export const Logo = styled.div`
     display: flex;
     align-items: center;
-    height:54px;
+    height:52px;
     font-size:18px;
     font-weight:700;
     cursor:pointer;
-    margin-top:3px;
+    margin-top:0px;
     color: #F1F3F4;
     margin-left: 42px;
     img{
@@ -77,18 +77,24 @@ export const SearchWrapper = styled.div`
         // right: 182px;
         right: 28px;
         display:inline-block;
-        height:54px;
-        padding:14px 0;
+        height:52px;
+        padding:11px 0;
         // margin-left:300px;
     }
+    &.desktop.right{
+        right: 180px;
+    }
     .zoomPhone{
-        top:5px;
+        top:11px;
     }
     &.phone{
-        // padding:5px 0;
+        position: absolute;
+        // right: 182px;
+        right: 10px;
+        padding:6px 0;
         display:block;
-        width:70%;
-        height:40px;
+        width:55%;
+        height:52px;
         margin:0 auto;
     }
 `;
@@ -115,20 +121,24 @@ export const SearchInput = styled.input.attrs({
 export const NavItem = styled.div`
     // box-sizing:border-box;
     cursor:pointer;
-    height:54px;
-    padding:20px 20px;
+    height:52px;
+    padding:16px 20px;
     color:#B4B6BD;
     &:hover{
-        height:56px;
+        height:52px;
         color:#eee;
         background:#000;
-        border-bottom:2px solid #f00;
+        border-bottom:2px solid #DE5E60;
     }
     &.right{
         float:right;
     }
     &.left{
         float:left;
+    }
+    &.zindex{
+        position: relative;
+        z-index: 100;
     }
     span{
         padding:0;
@@ -142,7 +152,10 @@ export const Menu = styled.ul`
     border-bottom:2px solid #DE5E60;
     display:none;
     &.show{
+        height:52px;
+        border-bottom:2px solid #DE5E60;
         display:block;
+        z-index: 50;
     }
     &.hide{
         display:none;
@@ -163,7 +176,7 @@ export const MenuItem = styled.li`
 export const LoginBox = styled.div`
     position:absolute;
     z-index:100;
-    top:56px;
+    top:52px;
     right:0px;
     width:280px;
     border: 1px solid rgba(0,0,0,.1);

@@ -19,7 +19,7 @@ class Header extends Component {
                          {/* 电脑平板 >=768px */}
                         <MediaQuery minWidth={768}>
                             <Logo className="desktop"><img alt="BurCha" src={LogoImg} />柏成✘</Logo>
-                            <SearchWrapper className="desktop">
+                            <SearchWrapper className={window.location.hash.includes('root') || this.props.loginState?"desktop right":"desktop"} >
                                 <CSSTransition
                                     in={this.props.focus}
                                     timeout={400}
@@ -74,16 +74,16 @@ class Header extends Component {
 
                         {/* 手机  <=767px */}
                         <MediaQuery maxWidth={767}>
-                            <NavItem className="right" onClick={this.props.loginNavShowHide}>
+                            {/* <NavItem className="right" onClick={this.props.loginNavShowHide}>
                                 <span className="iconfont zoom">&#xe606;</span>
-                            </NavItem>
-                            <NavItem className="left" onClick={this.props.navShowHide}>
+                            </NavItem> */}
+                            <NavItem className="left zindex" onClick={this.props.navShowHide}>
                                 <span className="iconfont zoom">&#xe663;</span>
                             </NavItem>
                             {/* <Logo className="phone">
                                 <img alt="BurCha" src={LogoImg} />柏成✘
                             </Logo> */}
-                            <Menu className={this.props.loginNavShow?"show":"hide"}>
+                            <Menu className={this.props.loginNavShow?"show":"show"}>
                                 <MenuItem>
                                     <SearchWrapper className="phone">
                                         <SearchInput className="phone"
@@ -107,13 +107,13 @@ class Header extends Component {
                                         
                                     </SearchWrapper>
                                 </MenuItem> 
-                                {
+                                {/* {
                                     this.props.loginState ? <Fragment><MenuItem onClick={this.props.logout}><span>退出</span></MenuItem>
                                       <Link to='/write'><MenuItem><span>写文章</span></MenuItem></Link>
                                     </Fragment>
                                    :(window.location.hash.includes('root') ? <NavItem className="right" onClick={()=>{this.props.loginBoxShowHide(true)}}><span>登录</span></NavItem> : null)
                                    
-                                }
+                                } */}
                                 <LoginBox className={this.props.loginBox?"show phone":"hide phone"}>
                                     <form>
                                         <Close onClick={()=>{this.props.loginBoxShowHide(false)}}>X</Close>
